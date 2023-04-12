@@ -22,6 +22,7 @@ const maxMotors = 16;
 function setup() {
   createCanvas(1000, 1000, WEBGL);
   standard_pose();
+  noLoop();
 }
 
 function draw() {
@@ -34,10 +35,5 @@ function draw() {
 function standard_pose() {
   for (let i = 0; i < maxMotors; ++i) {
     rotateAngle[i] = initialAngleID[i] - originalAngleID[i];
-    // motor_slider_ID[i].setValue(initialAngleID[i]);
-    // if (isConnectedToRobot == true) {
-    //   port.write(WCKCommand.positionMove(2, i, (int)
-    //   motor_slider_ID[i].getValue()));
-    // }
   }
 }
